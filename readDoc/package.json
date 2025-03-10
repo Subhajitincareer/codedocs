@@ -1,0 +1,140 @@
+{
+  "name": "codedocs",
+  "displayName": "CodeDocs",
+  "description": "Integrated, Real-Time Documentation Access in VS Code",
+  "version": "1.2.7",
+  "publisher": "subhajitdev2025",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Education"
+  ],
+  "keywords": [
+    "documentation",
+    "npm",
+    "pip",
+    "packages",
+    "dependencies"
+  ],
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "badges": [
+    {
+      "url": "https://img.shields.io/visual-studio-marketplace/v/subhajitdev2025.codedocs",
+      "href": "https://marketplace.visualstudio.com/items?itemName=subhajitdev2025.codedocs",
+      "description": "VS Code Marketplace Version"
+    }
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:codedocsPanelView",
+    "onCommand:codedocs.showDocs",
+    "onCommand:codedocs.searchDocs"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codedocs.showDocs",
+        "title": "Show Documentation Panel",
+        "category": "CodeDocs",
+        "icon": "$(book)"
+      },
+      {
+        "command": "codedocs.searchDocs",
+        "title": "Search Documentation",
+        "category": "CodeDocs",
+        "icon": "$(search)"
+      },
+      {
+        "command": "codedocs.refreshDependencies",
+        "title": "Refresh Dependencies",
+        "category": "CodeDocs",
+        "icon": "$(refresh)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codedocs-sidebar",
+          "title": "CodeDocs",
+          "icon": "$(book)"
+        }
+      ]
+    },
+    "views": {
+      "codedocs-sidebar": [
+        {
+          "id": "codedocsPanelView",
+          "name": "Documentation",
+          "when": "workbenchState != empty"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codedocs.showDocs",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codedocs.searchDocs",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "codedocs.refreshDependencies",
+          "when": "view == codedocsPanelView",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "codedocs.showDocs",
+          "when": "viewItem == dependency",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.x.x",
+    "@typescript-eslint/parser": "^5.x.x",
+    "eslint": "^8.x.x",
+    "typescript": "^4.x.x",
+    "vscode-test": "^1.6.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subhajitincareer/codedocs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/subhajitincareer/codedocs/issues"
+  },
+  "homepage": "https://github.com/subhajitincareer/codedocs#readme",
+  "pricing": "Free"
+}
