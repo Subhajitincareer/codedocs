@@ -1,94 +1,71 @@
-# 📚 CodeDocs: Documentation at Your Fingertips
+# 📚 CodeDocs
 
-<div align="center">
-  <h3>All your project documentation in one place - right inside VS Code!</h3>
-</div>
+CodeDocs is a powerful VS Code extension that brings package documentation directly into your editor. Get instant access to documentation for your project's dependencies without leaving VS Code.
 
-## 🔍 What is CodeDocs?
+## ✨ Features
 
-CodeDocs is a VS Code extension that brings documentation for all your project dependencies directly into your editor. No more context switching between coding and reading docs!
+- 📖 **Integrated Documentation Viewer**: Access package documentation directly within VS Code
+- 🔍 **Quick Search**: Use `Ctrl+Shift+D` to search documentation for selected text
+- 🔄 **Auto-Detection**: Automatically detects project dependencies from package.json and requirements.txt
+- 📱 **Offline Support**: Built-in documentation for popular packages (React, Express, Axios)
+- 🎯 **Context Menu Integration**: Right-click to search documentation for selected text
+- 🔄 **Live Updates**: Documentation panel updates as you add or remove dependencies
 
-## 🚀 Quick Start Guide
+## 🚀 Installation
 
-### Step 1: Install the Extension
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "CodeDocs"
+4. Click Install
+5. Reload VS Code
 
-- Download the `codedocs-1.0.0.vsix` file
-- Open VS Code and press `Ctrl+Shift+X` to open Extensions
-- Click `...` at the top of Extensions panel
-- Select "Install from VSIX..." and choose the downloaded file
-- Restart VS Code
+## 📝 Usage
 
-### Step 2: Open a Project
+1. **View Dependencies**
+   - Click the book icon (📚) in the activity bar
+   - Your project's dependencies will be listed in the sidebar
 
-- Open any project with a `package.json` (for JavaScript/Node.js) or `requirements.txt` (for Python)
-- The extension will automatically analyze your dependencies
+2. **Search Documentation**
+   - Select text in your code
+   - Press `Ctrl+Shift+D` (or `Cmd+Shift+D` on Mac)
+   - Or right-click and select "Search Documentation"
 
-### Step 3: View Your Documentation
+3. **Refresh Dependencies**
+   - Click the refresh icon in the CodeDocs panel
+   - Dependencies will be re-scanned automatically
 
-- Click on the book icon 📚 in the activity bar (left side panel)
-- You'll see all your project dependencies listed
-- Simply click on any package name to view its documentation
-- The documentation will appear in a panel on the right
+## ⚙️ Supported Project Types
 
-### Step 4: Use Keyboard Shortcuts
+- JavaScript/Node.js (package.json)
+- Python (requirements.txt)
 
-- Select any code or package name in your editor
-- Press `Ctrl+Shift+D` (or `Cmd+Shift+D` on Mac)
-- Documentation for the selected term will open instantly!
+## 🔧 Requirements
 
-## 🛠️ Features
+- VS Code version 1.60.0 or higher
+- Node.js/npm or Python project with dependencies
 
-- **Auto-Detection** - Automatically finds all your project dependencies
-- **Built-in Docs** - Offline documentation for popular packages like React, Express and Axios
-- **Online Search** - Fetches documentation from npm and PyPI
-- **Fast Access** - Keyboard shortcuts for quick documentation access
-- **Code Integration** - Select any code to find related documentation
+## 🐛 Troubleshooting
 
-## 🔄 Refreshing Your Dependencies
+1. **Nothing shows in the panel?**
+   - Ensure you have a package.json or requirements.txt file
+   - Try clicking the refresh icon
+   - Restart VS Code
 
-If you add new packages to your project:
-
-1. Click the refresh icon (🔄) in the top-right corner of the CodeDocs panel
-2. CodeDocs will scan your project files again and update the list
-
-## 📋 Supported Project Types
-
-| Language | Supported File |
-|----------|----------------|
-| JavaScript/Node.js | `package.json` |
-| Python | `requirements.txt` |
-
-## ⚠️ Troubleshooting
-
-### Nothing showing up in the panel?
-
-1. Make sure your project has a `package.json` or `requirements.txt` file
-2. Check that this file has dependencies listed
-3. Click the refresh button (🔄) in the panel header
-4. Restart VS Code
-
-### Can't see the CodeDocs icon?
-
-1. Try the keyboard shortcut: `Ctrl+Shift+D` (or `Cmd+Shift+D` on Mac)
-2. Check the Extensions panel to make sure CodeDocs is installed
-3. Reinstall the extension if needed
-
-### Documentation not loading for some packages?
-
-1. Popular packages (React, Express, Axios) work offline with built-in docs
-2. For other packages, you need internet access
-3. Some packages may have limited or no documentation available
+2. **Documentation not loading?**
+   - Check your internet connection
+   - Try refreshing the dependencies
+   - Some packages have built-in offline documentation
 
 ## ⌨️ Keyboard Shortcuts
 
-| Action | Windows/Linux | Mac |
-|--------|---------------|-----|
-| Open Documentation | `Ctrl+Shift+D` | `Cmd+Shift+D` |
+| Command | Shortcut (Windows/Linux) | Shortcut (Mac) |
+|---------|-------------------------|----------------|
+| Show Documentation | `Ctrl+Shift+D` | `Cmd+Shift+D` |
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
----
+## 🤝 Contributing
 
-**Made with ❤️ for developers who love good documentation!** 
+Contributions are welcome! Please feel free to submit a Pull Request. 
